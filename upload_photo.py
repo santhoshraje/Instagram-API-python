@@ -8,7 +8,7 @@ import os
 
 username = ""
 password = ""
-photocaption = "Comment Amen if you love God!\n.\n#jesus #love #christian #christianity #amen #christianblogger #christianlife #christianmom #christiangirl #christianliving #christianwoman #faith #grace #truth #choosejoy #Godslove #GodlovesYou #BibleVerse"
+photocaption = ""
 InstagramAPI = InstagramAPI(username, password)
 InstagramAPI.login()
 
