@@ -6,28 +6,41 @@ from InstagramAPI import InstagramAPI
 from random import randint
 import os
 
-username = ""
-password = ""
-photocaption = ""
+username = " "
+password = " "
+photo_caption = " "
+remove_after_upload = True
+continue_loop = 1
+directory_path = " "
+
+#login to instagram
 InstagramAPI = InstagramAPI(username, password)
 InstagramAPI.login()
 
-q = 1
-while q:
+while continue_loop:
+ # generate a random integer from 0 to 1000
  i = randint(0, 1000)
- photo_path = '/home/user/Pictures/' + str(i) + '.jpg'
-
+ # directory_path is full of photos that are named from 0 to 1000
+ photo_path = directory_path + str(i) + '.jpg'
+ # if the path exists
  if os.path.exists(photo_path):
-  caption = photocaption
+  # upload the photo
   try:
-    InstagramAPI.uploadPhoto(photo_path, caption=caption)
+    InstagramAPI.uploadPhoto(photo_path, caption = photo_caption)
+  # check for corrupted files
   except RuntimeError:
     print("Corrupted file detected. File has been deleted.")
+    # delete the corrupted file
     os.remove(photo_path)
     continue
-  q = 0
+  # break out of the loop
+  continue_loop = 0
+  # print success message
   print(photo_path + " has been successfully uploaded.")
-  os.remove(photo_path)
+  # if user wants the photo to be deleted after uploading
+  if remove_after_upload:
+    os.remove(photo_path)
+ # if photo upload is not successful
  else:
   continue
 
