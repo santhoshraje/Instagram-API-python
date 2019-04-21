@@ -5,13 +5,18 @@
 from InstagramAPI import InstagramAPI
 from random import randint
 import os
+import telegram
 
 username = " "
 password = " "
 photo_caption = " "
-remove_after_upload = True
+remove_after_upload = False
 continue_loop = 1
 directory_path = " "
+# id for the telegram bot that you want to use
+chat_bot = telegram.Bot(token=' ')
+# id of the telegram account you want to send the message to
+chat_id = 0
 
 #login to instagram
 InstagramAPI = InstagramAPI(username, password)
