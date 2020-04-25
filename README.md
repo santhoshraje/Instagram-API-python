@@ -2,6 +2,8 @@
 
 Built using https://github.com/LevPasha/Instagram-API-python
 
+Too lazy to post your own photos to instagram? Use this script.
+
 ### Installation Instructions
 
 1. Fork/Clone/Download this repo
