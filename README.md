@@ -1,8 +1,8 @@
-# instagram-auto-upload-script
+# instagram upload automation bot
 
 Built using https://github.com/LevPasha/Instagram-API-python
 
-Too lazy to post your own photos to instagram? Use this script.
+Too lazy to post your own photos to instagram? Use this bot!
 
 ### Installation Instructions
 
