@@ -1,4 +1,4 @@
-# instagram upload automation bot
+# Instagram upload automation bot
 
 Built using https://github.com/LevPasha/Instagram-API-python
 
